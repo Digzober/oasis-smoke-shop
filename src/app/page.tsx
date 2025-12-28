@@ -199,7 +199,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="absolute right-[15%] top-1/2 -translate-y-1/2 hidden lg:block z-0"
+          className="absolute right-[5%] top-[35%] -translate-y-1/2 hidden lg:block z-0"
         >
           <DotLottieReact
             src="/lottie/hot-balloon.lottie"
