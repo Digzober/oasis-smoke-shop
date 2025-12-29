@@ -121,3 +121,92 @@
   background-color: var(--color-yellow);
   border-radius: 9999px;
 }
+
+/* Custom scrollbar for dark sections */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-purple);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-purple-light);
+}
+
+/* ==========================================
+   SECTION FOUR - Floating Spots
+   ========================================== */
+
+/* Floating spot illustrations container */
+.floating-spot {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  transform-origin: center center;
+}
+
+.floating-spot svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Spot positions - Desktop */
+.spot-eyeball { top: 8%; left: 5%; width: 90px; }
+.spot-lips { top: 12%; right: 8%; width: 100px; }
+.spot-diamond { top: 35%; left: 3%; width: 70px; }
+.spot-triangles { top: 20%; left: 18%; width: 55px; }
+.spot-amoeba { bottom: 25%; right: 5%; width: 95px; }
+.spot-star { bottom: 10%; left: 10%; width: 75px; }
+.spot-pill { top: 55%; right: 3%; width: 70px; }
+.spot-face { bottom: 8%; right: 18%; width: 85px; }
+.spot-eye-diamond { top: 65%; left: 6%; width: 80px; }
+.spot-squiggle { top: 40%; right: 12%; width: 60px; }
+.spot-ring { bottom: 40%; left: 4%; width: 70px; }
+.spot-spiral { top: 75%; right: 6%; width: 55px; }
+
+/* Responsive - scale down on tablet */
+@media (max-width: 1024px) {
+  .floating-spot {
+    transform: scale(0.8);
+  }
+}
+
+/* Scale spots on mobile - smaller on mobile only */
+@media (max-width: 768px) {
+  .floating-spot {
+    transform: scale(0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-spot {
+    transform: scale(0.35);
+  }
+}
+
+/* Map pins */
+.map-pin {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.map-pin .pin-dot {
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.map-pin:hover .pin-dot {
+  transform: scale(1.3);
+}
+
+.map-pin.active .pin-dot {
+  fill: #E8D44D;
+}

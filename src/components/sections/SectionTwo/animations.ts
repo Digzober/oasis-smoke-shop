@@ -7,10 +7,16 @@ export const initScrollAnimations = (container: HTMLElement) => {
   // Set default smoothing for all animations
   gsap.defaults({ overwrite: 'auto' });
 
+  // Ensure container exists before setting up animations
+  if (!container) {
+    console.warn('SectionTwo container not found');
+    return;
+  }
+
   // Section label and subtitle fade up - smoother with longer duration
-  gsap.from(".section-label, .section-subtitle", {
+  gsap.from(container.querySelectorAll(".section-label, .section-subtitle"), {
     scrollTrigger: {
-      trigger: ".section-two",
+      trigger: container,
       start: "top 85%",
       toggleActions: "play none none reverse"
     },
@@ -22,72 +28,88 @@ export const initScrollAnimations = (container: HTMLElement) => {
   });
 
   // Headline words slide up with stagger - smoother entrance
-  gsap.from(".headline-word", {
-    scrollTrigger: {
-      trigger: ".section-headline",
-      start: "top 90%",
-      toggleActions: "play none none reverse"
-    },
-    y: 60,
-    opacity: 0,
-    duration: 1.4,
-    stagger: 0.15,
-    ease: "power3.out"
-  });
+  const sectionHeadline = container.querySelector(".section-headline");
+  if (sectionHeadline) {
+    gsap.from(container.querySelectorAll(".headline-word"), {
+      scrollTrigger: {
+        trigger: sectionHeadline,
+        start: "top 90%",
+        toggleActions: "play none none reverse"
+      },
+      y: 60,
+      opacity: 0,
+      duration: 1.4,
+      stagger: 0.15,
+      ease: "power3.out"
+    });
+  }
 
   // Left card slides in from left - gentler movement
-  gsap.from(".card-left", {
-    scrollTrigger: {
-      trigger: ".cards-container",
-      start: "top 85%",
-      toggleActions: "play none none reverse"
-    },
-    x: -80,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power2.out"
-  });
+  const cardsContainer = container.querySelector(".cards-container");
+  const cardLeft = container.querySelector(".card-left");
+  if (cardsContainer && cardLeft) {
+    gsap.from(cardLeft, {
+      scrollTrigger: {
+        trigger: cardsContainer,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      },
+      x: -80,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power2.out"
+    });
+  }
 
   // Right card slides in from right - gentler movement
-  gsap.from(".card-right", {
-    scrollTrigger: {
-      trigger: ".cards-container",
-      start: "top 85%",
-      toggleActions: "play none none reverse"
-    },
-    x: 80,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power2.out"
-  });
+  const cardRight = container.querySelector(".card-right");
+  if (cardsContainer && cardRight) {
+    gsap.from(cardRight, {
+      scrollTrigger: {
+        trigger: cardsContainer,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      },
+      x: 80,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power2.out"
+    });
+  }
 
   // Plus connector pops in - smoother, less aggressive
-  gsap.from(".plus-connector", {
-    scrollTrigger: {
-      trigger: ".cards-container",
-      start: "top 80%",
-      toggleActions: "play none none reverse"
-    },
-    scale: 0.5,
-    rotation: -90,
-    opacity: 0,
-    duration: 1,
-    ease: "back.out(1.4)",
-    delay: 0.2
-  });
+  const plusConnector = container.querySelector(".plus-connector");
+  if (cardsContainer && plusConnector) {
+    gsap.from(plusConnector, {
+      scrollTrigger: {
+        trigger: cardsContainer,
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      },
+      scale: 0.5,
+      rotation: -90,
+      opacity: 0,
+      duration: 1,
+      ease: "back.out(1.4)",
+      delay: 0.2
+    });
+  }
 
   // CTA fade up - smoother
-  gsap.from(".cta-container", {
-    scrollTrigger: {
-      trigger: ".cta-container",
-      start: "top 92%",
-      toggleActions: "play none none reverse"
-    },
-    y: 30,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-  });
+  const ctaContainer = container.querySelector(".cta-container");
+  if (ctaContainer) {
+    gsap.from(ctaContainer, {
+      scrollTrigger: {
+        trigger: ctaContainer,
+        start: "top 92%",
+        toggleActions: "play none none reverse"
+      },
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out"
+    });
+  }
 };
 
 export const initFloatingAnimations = () => {
@@ -149,7 +171,7 @@ export const initFloatingAnimations = () => {
   });
 };
 
-export const initParallaxAnimations = () => {
+export const initParallaxAnimations = (container?: HTMLElement) => {
   const parallaxSpots = [
     { selector: ".spot-lips-eye", y: -100 },
     { selector: ".spot-sun-eye", y: -80 },
@@ -157,12 +179,15 @@ export const initParallaxAnimations = () => {
     { selector: ".spot-diamond-teal", y: -120 },
   ];
 
+  const triggerElement = container || document.querySelector(".section-two");
+  if (!triggerElement) return;
+
   parallaxSpots.forEach(({ selector, y }) => {
-    const element = document.querySelector(selector);
+    const element = container ? container.querySelector(selector) : document.querySelector(selector);
     if (element) {
-      gsap.to(selector, {
+      gsap.to(element, {
         scrollTrigger: {
-          trigger: ".section-two",
+          trigger: triggerElement,
           start: "top bottom",
           end: "bottom top",
           scrub: 1

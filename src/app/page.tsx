@@ -7,6 +7,8 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import gsap from 'gsap'
 import { TopoBackground } from '@/components/TopoBackground'
 import SectionTwo from '@/components/sections/SectionTwo'
+import SectionThree from '@/components/sections/SectionThree'
+import SectionFour from '@/components/sections/SectionFour'
 
 export default function Home() {
   const scrollDownRef = useRef<HTMLDivElement>(null)
@@ -113,6 +115,21 @@ export default function Home() {
         <div className="w-10"></div>
       </nav>
 
+      {/* Aquarius Lottie - Center on mobile, left side on desktop */}
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.6, duration: 0.8 }}
+        className="absolute left-1/2 -translate-x-1/2 top-[9%] w-[260px] h-[260px] md:left-[0%] md:translate-x-0 md:top-[15%] md:w-[400px] md:h-[400px] z-[5] opacity-70 md:opacity-90"
+      >
+        <DotLottieReact
+          src="/lottie/aquarius.lottie"
+          loop
+          autoplay
+          style={{ width: '100%', height: '100%' }}
+        />
+      </motion.div>
+
       {/* Diagonal Stripes Accent - Left */}
       <div className="absolute -left-10 bottom-1/4 flex gap-2 md:gap-3 -rotate-45 z-[5] opacity-50">
         {[...Array(8)].map((_, i) => (
@@ -137,7 +154,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="text-xs md:text-sm tracking-widest mb-2 opacity-60"
           >
-            01 — NEW MEXICO OWNED SINCE 1998
+            01 — NEW MEXICO OWNED SINCE 2011
           </motion.p>
 
           <motion.p
@@ -179,33 +196,18 @@ export default function Home() {
           </motion.p>
         </div>
 
-        {/* Lottie illustration - Mobile - Above text, centered */}
+        {/* Hot Balloon Lottie - Right side on mobile (smaller), Right side on desktop (larger) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="absolute left-1/2 -translate-x-1/2 top-16 lg:hidden z-0 opacity-70"
+          className="absolute right-[3%] top-[21%] w-[110px] h-[130px] md:right-[5%] md:top-[35%] md:-translate-y-1/2 md:w-[600px] md:h-[700px] z-0 opacity-60 md:opacity-100"
         >
           <DotLottieReact
             src="/lottie/hot-balloon.lottie"
             loop
             autoplay
-            style={{ width: 195, height: 234 }}
-          />
-        </motion.div>
-
-        {/* Lottie illustration - Desktop */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="absolute right-[5%] top-[35%] -translate-y-1/2 hidden lg:block z-0"
-        >
-          <DotLottieReact
-            src="/lottie/hot-balloon.lottie"
-            loop
-            autoplay
-            style={{ width: 600, height: 700 }}
+            style={{ width: '100%', height: '100%' }}
           />
         </motion.div>
       </section>
@@ -240,6 +242,12 @@ export default function Home() {
 
       {/* Section Two - One Building, Two Experiences */}
       <SectionTwo />
+
+      {/* Section Three - The Goods */}
+      <SectionThree />
+
+      {/* Section Four - Find Your Oasis */}
+      <SectionFour />
     </>
   )
 }

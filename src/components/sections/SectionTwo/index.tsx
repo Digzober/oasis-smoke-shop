@@ -53,17 +53,6 @@ export default function SectionTwo() {
         repeat: -1
       });
 
-      // Animate jellyfish floating - gentler movement
-      gsap.to(".jellyfish-decoration", {
-        x: -8,
-        y: -12,
-        rotation: -3,
-        duration: 7,
-        ease: "power1.inOut",
-        yoyo: true,
-        repeat: -1
-      });
-
       // Animate blue eyes floating - each with unique movement
       gsap.to(".blue-eye-1", { x: 6, y: -8, rotation: 4, duration: 5.5, ease: "power1.inOut", yoyo: true, repeat: -1 });
       gsap.to(".blue-eye-2", { x: -5, y: 7, rotation: -3, duration: 6.2, ease: "power1.inOut", yoyo: true, repeat: -1 });
@@ -117,16 +106,6 @@ export default function SectionTwo() {
       <div className="seashell-decoration absolute top-[6%] right-[2%] md:top-[10%] md:right-[4%] w-24 h-24 md:w-48 md:h-48 opacity-70 z-5">
         <DotLottieReact
           src="/lottie/seashell.lottie"
-          loop
-          autoplay
-          style={{ width: '100%', height: '100%' }}
-        />
-      </div>
-
-      {/* Decorative Jellyfish - Bottom Left */}
-      <div className="jellyfish-decoration absolute bottom-[18%] left-[2%] md:bottom-[22%] md:left-[4%] w-28 h-28 md:w-56 md:h-56 opacity-60 z-5">
-        <DotLottieReact
-          src="/lottie/jellyfish.lottie"
           loop
           autoplay
           style={{ width: '100%', height: '100%' }}
@@ -253,6 +232,7 @@ export default function SectionTwo() {
               side="right"
             />
           </div>
+
         </div>
 
         {/* CTA Section */}
