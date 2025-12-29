@@ -85,17 +85,23 @@ export default function Home() {
       {/* Navigation - Desktop */}
       <nav className="absolute top-0 left-0 right-0 z-50 p-6 md:p-8 hidden md:flex justify-between items-center">
         <div className="flex gap-10 items-center">
-          <a href="#" className="font-bebas text-2xl hover:text-yellow transition-colors">HOME</a>
-          <a href="#" className="font-bebas text-2xl hover:text-yellow transition-colors">SHOP</a>
-          <a href="#" className="font-bebas text-2xl hover:text-yellow transition-colors">LOCATIONS</a>
+          <a href="#hero" onClick={(e) => { e.preventDefault(); document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }); }} className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">HOME</a>
+          <a href="#experience" onClick={(e) => { e.preventDefault(); document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' }); }} className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">EXPERIENCE</a>
         </div>
-        <div className="text-center">
-          <div className="font-bebas text-5xl lg:text-6xl tracking-wider leading-none">OASIS</div>
-          <div className="font-bebas text-lg lg:text-xl tracking-[0.3em] text-yellow -mt-1">SMOKE SHOP</div>
-        </div>
+        <a href="#hero" onClick={(e) => { e.preventDefault(); document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }); }} className="cursor-pointer flex flex-col items-center">
+          <Image
+            src="/images/oasis-logo.png"
+            alt="Oasis Smoke Shop"
+            width={140}
+            height={140}
+            className="w-[120px] h-[120px] lg:w-[140px] lg:h-[140px] object-contain"
+          />
+          <span className="font-bebas text-lg lg:text-xl tracking-[0.3em] text-yellow -mt-2">SMOKE SHOP</span>
+        </a>
         <div className="flex gap-10 items-center">
-          <a href="#" className="font-bebas text-2xl hover:text-yellow transition-colors">ABOUT</a>
-          <a href="#" className="font-bebas text-2xl hover:text-yellow transition-colors">CONTACT</a>
+          <a href="#goods" onClick={(e) => { e.preventDefault(); document.getElementById('goods')?.scrollIntoView({ behavior: 'smooth' }); }} className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">THE GOODS</a>
+          <a href="#locations" onClick={(e) => { e.preventDefault(); document.getElementById('locations')?.scrollIntoView({ behavior: 'smooth' }); }} className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">LOCATIONS</a>
+          <a href="https://www.oasiscannabisnm.com" target="_blank" rel="noopener noreferrer" className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">THE DISPENSARY</a>
         </div>
       </nav>
 
@@ -108,10 +114,16 @@ export default function Home() {
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
-        <div className="text-center">
-          <div className="font-bebas text-4xl tracking-wider leading-none">OASIS</div>
-          <div className="font-bebas text-sm tracking-[0.25em] text-yellow -mt-1">SMOKE SHOP</div>
-        </div>
+        <a href="#hero" onClick={(e) => { e.preventDefault(); document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }); }} className="cursor-pointer flex flex-col items-center">
+          <Image
+            src="/images/oasis-logo.png"
+            alt="Oasis Smoke Shop"
+            width={90}
+            height={90}
+            className="w-[80px] h-[80px] object-contain"
+          />
+          <span className="font-bebas text-sm tracking-[0.25em] text-yellow -mt-1">SMOKE SHOP</span>
+        </a>
         <div className="w-10"></div>
       </nav>
 
@@ -146,7 +158,7 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 md:px-16 pt-20 md:pt-0 relative z-10">
+      <section id="hero" className="min-h-screen flex items-center justify-center px-4 md:px-16 pt-20 md:pt-0 relative z-10">
         <div className="max-w-4xl text-center relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 20 }}

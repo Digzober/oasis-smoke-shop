@@ -90,6 +90,7 @@ export default function SectionTwo() {
 
   return (
     <section
+      id="experience"
       ref={sectionRef}
       className="section-two relative min-h-screen bg-navy py-20 md:py-32 px-4 md:px-8 overflow-hidden"
     >

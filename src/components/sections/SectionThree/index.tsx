@@ -127,7 +127,7 @@ export default function SectionThree() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-three relative min-h-screen bg-mint py-20 md:py-32 px-4 md:px-8 overflow-hidden">
+    <section id="goods" ref={sectionRef} className="section-three relative min-h-screen bg-mint py-20 md:py-32 px-4 md:px-8 overflow-hidden">
       {/* Bubble Background */}
       <BubbleBackground />
 
