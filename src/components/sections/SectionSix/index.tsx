@@ -52,7 +52,7 @@ export default function SectionSix() {
   return (
     <section
       id="careers"
-      className="section-careers relative py-20 md:py-32 px-4 md:px-8 overflow-hidden bg-navy"
+      className="section-careers relative py-20 md:py-32 px-4 md:px-8 overflow-hidden bg-[#0D1B2A]"
       style={{
         backgroundImage: `
           linear-gradient(rgba(232, 212, 77, 0.03) 1px, transparent 1px),
@@ -136,7 +136,7 @@ export default function SectionSix() {
               }}
             >
               {/* Job Type Badge */}
-              <span className="job-type-badge absolute top-5 right-5 bg-yellow text-navy font-inter text-[11px] font-semibold uppercase px-3 py-1.5 rounded-full">
+              <span className="job-type-badge absolute top-5 right-5 bg-yellow text-[#0D1B2A] font-inter text-[11px] font-semibold uppercase px-3 py-1.5 rounded-full">
                 {job.type}
               </span>
 
@@ -157,7 +157,7 @@ export default function SectionSix() {
               </p>
 
               {/* Apply Button */}
-              <button className="apply-btn w-full bg-transparent border-2 border-yellow text-yellow font-bebas text-lg tracking-wider py-3 px-6 rounded-lg hover:bg-yellow hover:text-navy transition-colors duration-300">
+              <button className="apply-btn w-full bg-transparent border-2 border-yellow text-yellow font-bebas text-lg tracking-wider py-3 px-6 rounded-lg hover:bg-yellow hover:text-[#0D1B2A] transition-colors duration-300">
                 APPLY NOW
               </button>
             </motion.div>
@@ -184,7 +184,7 @@ export default function SectionSix() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-orange text-white font-bebas text-xl tracking-wider py-4 px-12 rounded-xl hover:bg-yellow hover:text-navy transition-colors duration-300"
+            className="bg-orange text-white font-bebas text-xl tracking-wider py-4 px-12 rounded-xl hover:bg-yellow hover:text-[#0D1B2A] transition-colors duration-300"
           >
             SEND GENERAL APPLICATION
           </motion.button>

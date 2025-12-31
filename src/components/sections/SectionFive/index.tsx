@@ -74,7 +74,7 @@ export default function SectionFive() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-xs md:text-sm tracking-widest mb-2 text-navy/60"
+            className="text-xs md:text-sm tracking-widest mb-2 text-[#0D1B2A]/60"
           >
             05 — ABOUT US
           </motion.p>
@@ -99,7 +99,7 @@ export default function SectionFive() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-navy/80 text-base md:text-lg max-w-xl mx-auto font-inter"
+            className="text-[#0D1B2A]/80 text-base md:text-lg max-w-xl mx-auto font-inter"
           >
             Family owned. Locally operated. As New Mexican as green chile.
           </motion.p>
@@ -113,7 +113,7 @@ export default function SectionFive() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="story-card story-card-2011 bg-navy rounded-2xl p-6 md:p-10 max-w-md w-full"
+            className="story-card story-card-2011 bg-[#0D1B2A] rounded-2xl p-6 md:p-10 max-w-md w-full"
           >
             <span className="font-bebas text-6xl md:text-8xl text-yellow leading-none block">
               2011
@@ -138,7 +138,7 @@ export default function SectionFive() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="story-card story-card-today bg-navy rounded-2xl p-6 md:p-10 max-w-md w-full"
+            className="story-card story-card-today bg-[#0D1B2A] rounded-2xl p-6 md:p-10 max-w-md w-full"
           >
             <span className="font-bebas text-6xl md:text-8xl text-yellow leading-none block">
               TODAY
@@ -158,7 +158,7 @@ export default function SectionFive() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-bebas text-3xl md:text-4xl text-navy text-center mb-10 md:mb-14 tracking-wide"
+            className="font-bebas text-3xl md:text-4xl text-[#0D1B2A] text-center mb-10 md:mb-14 tracking-wide"
           >
             WHAT WE STAND FOR
           </motion.h3>
@@ -171,11 +171,11 @@ export default function SectionFive() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="value-card bg-navy/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 text-center cursor-pointer transition-all duration-300"
+                className="value-card bg-[#0D1B2A]/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 text-center cursor-pointer transition-all duration-300"
                 style={{ boxShadow: '0 10px 30px rgba(0,0,0,0.2)' }}
               >
                 <div className="value-icon w-14 h-14 md:w-16 md:h-16 mx-auto mb-5 bg-yellow rounded-full flex items-center justify-center">
-                  <value.icon className="w-7 h-7 md:w-8 md:h-8 text-navy" />
+                  <value.icon className="w-7 h-7 md:w-8 md:h-8 text-[#0D1B2A]" />
                 </div>
                 <h4 className="font-bebas text-xl md:text-2xl text-yellow mb-3 tracking-wide">
                   {value.title}
@@ -198,17 +198,17 @@ export default function SectionFive() {
             className="relative max-w-3xl mx-auto"
           >
             {/* Quote marks */}
-            <span className="absolute -top-8 -left-4 md:-left-8 text-navy/20 font-bebas text-8xl md:text-9xl leading-none">
+            <span className="absolute -top-8 -left-4 md:-left-8 text-[#0D1B2A]/20 font-bebas text-8xl md:text-9xl leading-none">
               &ldquo;
             </span>
-            <span className="absolute -bottom-16 -right-4 md:-right-8 text-navy/20 font-bebas text-8xl md:text-9xl leading-none">
+            <span className="absolute -bottom-16 -right-4 md:-right-8 text-[#0D1B2A]/20 font-bebas text-8xl md:text-9xl leading-none">
               &rdquo;
             </span>
 
-            <p className="founder-quote font-bebas text-2xl md:text-4xl lg:text-5xl text-navy leading-tight px-8 md:px-12">
+            <p className="founder-quote font-bebas text-2xl md:text-4xl lg:text-5xl text-[#0D1B2A] leading-tight px-8 md:px-12">
               We didn&apos;t just open a smoke shop. We built a place where people feel at home.
             </p>
-            <p className="founder-name font-inter text-base md:text-lg text-navy/70 mt-6 md:mt-8">
+            <p className="founder-name font-inter text-base md:text-lg text-[#0D1B2A]/70 mt-6 md:mt-8">
               — Kane Oueis, Founder
             </p>
           </motion.div>
