@@ -9,6 +9,9 @@ import { TopoBackground } from '@/components/TopoBackground'
 import SectionTwo from '@/components/sections/SectionTwo'
 import SectionThree from '@/components/sections/SectionThree'
 import SectionFour from '@/components/sections/SectionFour'
+import SectionFive from '@/components/sections/SectionFive'
+import SectionSix from '@/components/sections/SectionSix'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   const scrollDownRef = useRef<HTMLDivElement>(null)
@@ -101,7 +104,8 @@ export default function Home() {
         <div className="flex gap-10 items-center">
           <a href="#goods" onClick={(e) => { e.preventDefault(); document.getElementById('goods')?.scrollIntoView({ behavior: 'smooth' }); }} className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">THE GOODS</a>
           <a href="#locations" onClick={(e) => { e.preventDefault(); document.getElementById('locations')?.scrollIntoView({ behavior: 'smooth' }); }} className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">LOCATIONS</a>
-          <a href="https://www.oasiscannabisnm.com" target="_blank" rel="noopener noreferrer" className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">THE DISPENSARY</a>
+          <a href="#about" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }} className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">ABOUT</a>
+          <a href="#careers" onClick={(e) => { e.preventDefault(); document.getElementById('careers')?.scrollIntoView({ behavior: 'smooth' }); }} className="font-bebas text-2xl hover:text-yellow transition-colors cursor-pointer">CAREERS</a>
         </div>
       </nav>
 
@@ -260,6 +264,15 @@ export default function Home() {
 
       {/* Section Four - Find Your Oasis */}
       <SectionFour />
+
+      {/* Section Five - About Us */}
+      <SectionFive />
+
+      {/* Section Six - Careers */}
+      <SectionSix />
+
+      {/* Footer */}
+      <Footer />
     </>
   )
 }

@@ -210,3 +210,28 @@
 .map-pin.active .pin-dot {
   fill: #E8D44D;
 }
+
+/* ==========================================
+   SECTION FIVE (ABOUT) - Floating Spots
+   ========================================== */
+
+.spot-about-eyeball { top: 8%; left: 5%; width: 90px; }
+.spot-about-diamond { top: 12%; right: 8%; width: 80px; }
+.spot-about-face { bottom: 15%; left: 6%; width: 95px; }
+.spot-about-lips { bottom: 20%; right: 5%; width: 100px; }
+
+/* ==========================================
+   SECTION SIX (CAREERS) - Floating Spots
+   ========================================== */
+
+.spot-careers-star { top: 10%; left: 4%; width: 75px; }
+.spot-careers-pill { top: 15%; right: 6%; width: 70px; }
+.spot-careers-amoeba { bottom: 18%; left: 5%; width: 95px; }
+.spot-careers-ring { bottom: 12%; right: 4%; width: 80px; }
+
+/* ==========================================
+   FOOTER - Floating Spots
+   ========================================== */
+
+.spot-footer-spiral { bottom: 15%; left: 3%; width: 55px; }
+
